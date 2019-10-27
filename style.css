@@ -1,3 +1,7 @@
+body {
+    background-color:azure;
+}
+
 .jqvmap-label
 {
 	position: absolute;
@@ -51,4 +55,8 @@
 
 h1 {
   text-align: center;  
+}
+
+#vmap {
+    border: solid;
 }
