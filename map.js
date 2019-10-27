@@ -7,7 +7,7 @@
  * @builddate 2016/06/02
  */
 
-let VectorCanvas = function (width, height, params) {
+var VectorCanvas = function (width, height, params) {
     this.mode = window.SVGAngle ? 'svg' : 'vml';
     this.params = params;
   
@@ -50,7 +50,7 @@ let VectorCanvas = function (width, height, params) {
     canvas: null
   };
   
-  let ColorScale = function (colors, normalizeFunction, minValue, maxValue) {
+  var ColorScale = function (colors, normalizeFunction, minValue, maxValue) {
     if (colors) {
       this.setColors(colors);
     }
@@ -69,7 +69,7 @@ let VectorCanvas = function (width, height, params) {
     colors: []
   };
   
-  let JQVMap = function (params) {
+  var JQVMap = function (params) {
     params = params || {};
     var map = this;
     var mapData = JQVMap.maps[params.map];
