@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>NGO US MAP</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+    <link href="style.css" media="screen" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="map.js"></script>
+    <script type="text/javascript" src="map-us.js" charset="utf-8"></script>
+
+    <script>
+      jQuery(document).ready(function () {
+        jQuery('#vmap').vectorMap({
+          map: 'usa_en',
+          enableZoom: true,
+          showTooltip: true,
+          selectedColor: null,
+          hoverColor: '#0000FF',
+          colors: {
+            mo: '#C9DFAF',
+            fl: '#C9DFAF',
+            or: '#C9DFAF'
+          },
+          onRegionClick: function(event, code, region){
+            event.preventDefault();
+            info(code);
+          },
+/*          onLabelShow: function(event, label, code){
+            console.log(label.TextContent);
+            //hover(code, label);
+          } */
+    
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+    <h1>US NGO MAP</h1>
+    <div id="vmap" style="width: 100%; height: 600px;"></div>
+    <div>
+        <p id="info"></p>
+    </div>
+  </body>
+</html>
